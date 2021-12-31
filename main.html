@@ -10,78 +10,92 @@
 
     <style>
 
+        /* 스크롤 왜 생기는지? + 스크롤x상태로 한가운데 정렬로 */
+
+        /* 전체틀 */
+        body {
+            background-color: #E4EBF5;
+        }
+        
         main {
-            /* border: 1px solid black; */
-            width: 1200px;
+            width: 1100px;
             height: 600px;
             margin: auto;
         }
-        body {
-            background-color: #E4EBF5;
-
-        }
-
+        
+        /* 명함틀 */
         .box {
             margin: center center;
-
+            
             position: absolute;
-            left: 230px;
-            top: 120px;
+            /* left: 230px;
+            top: 120px; */
+            
+            left: 100px;
+            top: 0px;
             /* border: 1px solid black; */
             width: 1100px;
             height: 600px;
             border-radius: 40px;
             box-shadow: 3px 3px 10px #AAB7CB;
         }
-
+        
+        /* 프로필 사진 */
         /* 추후 프로필 이미지 추가 */
         #pic { 
             /* border: 1px solid black; */
             width: 200px;
             height: 250px;
-
+            
             position: relative;
             left: 80px;
             top : 80px;
-
+            
             border-radius: 4px;
             box-shadow: inset 1px 3px 5px #AAB7CB;
-
+            
             overflow: hidden;
-
+            
             background-image: url(../images/pngtree-profile-line-black-icon-png-image_691065.jpg);
             background-size: 250px;
             background-position: 230px 250px;
             background-color: transparent;
-
+            
             /* 배경 투명하게하는거 추후 해결하기 */
             /* opacity:0.25!important;                       
             filter:alpha(opacity=25);                     */
         }
-
+        
         #name {
             font-size: 3em;
             font-weight: bold;
             color: #333333;
-
+            
             position: relative;
             left: 310px;
             top: -175px;
-        }
 
+            width: 200px;
+        }
+        
         .txt {
+            width: 350px;
             position: relative;
             left: 320px;
-            top: -180px;
+            top: -185px;
             
             font-size: 1.3em;
             /* float: left; */
+            
+            
+            /* 얘도 안됨..... */
+            /* visibility: hidden; */
         }
-
+        
         .txt div {
-            margin: 5px 0px;
+            margin: 6px 0px;
         }
-
+        
         .switch-button { 
             position: relative; 
             display: inline-block; 
@@ -89,7 +103,7 @@
             left: 510px;
             top: -220px;
         } 
-            
+        
         .switch-button input { 
             opacity: 0; 
             width: 0; 
@@ -109,7 +123,7 @@
             -webkit-transition: .2s; 
             transition: .2s; 
         } 
-            
+        
         .onoff-switch:before { 
             position: absolute; 
             content: ''; 
@@ -127,8 +141,8 @@
         .switch-button input:checked + .onoff-switch { 
             background-color: #F2D522; 
             box-shadow: inset 1px 5px 1px #E3AE56; 
-
         } 
+        
         
         
         .switch-button input:checked + .onoff-switch:before { 
@@ -136,90 +150,149 @@
             -ms-transform: translateX(26px); 
             transform: translateX(26px); 
         }
-
-
-    .btn {
-        /* 상자크기 */
-        width: 300px;
-        height: 70px;
         
-        /* 위치 */
-        position: relative;
-        left: 700px;
-        top: -420px;
         
-        /* 상자 디자인 큰틀*/
-        margin-bottom: 35px;
-        border: 0px;
-        background-color: #E4EBF5;
         
-        /* 그림자 */
-        border-radius: 10px;
-        box-shadow:.8rem .5rem 1.4rem  #BEC5D0, -.3rem -.4rem .8rem #FBFBFB;
-        /* box-shadow:-.2rem -.2rem 1.8rem white, .8rem .8rem 1.4rem  #AAB7CB; */
-
-        /* 글씨 */
-        color: #333333;
-        font-size: 1.7em;
-        font-weight: bold;
         
+        
+        
+        
+        
+        /* project버튼 */
+        .project {
+            width: 300px;
+            
+            position: relative;
+            left: 700px;
+            top: -420px;
+        }
+        .btn {
+            width: 300px;
+            height: 70px;
+            
+            margin-bottom: 35px;
+            border: 0px;
+            background-color: #E4EBF5;
+            
+            border-radius: 10px;
+            box-shadow:.8rem .5rem 1.4rem  #BEC5D0, -.2rem -.4rem 1.2rem #FBFBFB;
+            /* box-shadow:-.2rem -.2rem 1.8rem white, .8rem .8rem 1.4rem  #AAB7CB; */
+            
+            color: #333333;
+            font-size: 1.7em;
+            font-weight: bold;
+        }
+        
+        .btn:active {
+            box-shadow: inset -.3rem -.1rem 1.4rem  #FBFBFB, inset .3rem .4rem .8rem #BEC5D0; 
+            cursor: pointer;
+        }
+        
+        
+        
+        
+        
+        /* 낮밤Tab 수정중...ㅋ--------------------------------------------------- */
+        .tab {
+            /* border: 1px solid black; */
+            border-radius: 35px;
+            width: 200px;
+            height: 60px;
+            position: relative;
+            left: 84px;
+            top: -470px;
+            box-shadow:.8rem .5rem 1.4rem  #BEC5D0, -.2rem -.4rem 1.2rem #FBFBFB;
+            
+        }
+        
+        .tab label {
+            display: inline-block;
+            /* background-color: yellow; */
+            font-size: 1.5em;
+            
+        }
+        
+        .tab input { display: none; }
+        
+        .tabColor {
+            /* border: 1px solid black; */
+            border-radius: 35px;
+            width: 80px;
+            height: 40px;
+            box-shadow: inset -.3rem -.1rem 1.4rem  #FBFBFB, inset .3rem .4rem .8rem #BEC5D0; 
+            
+            position: relative;
+            left: 10px;
+            top: 10px;
+            
+        }
+        
+        
+        
+        /* ------------------------------------------------------------------- */
+        
+        
+        
+        #introduce {
+            position: relative;
+            left: 700px;
+            top : -480px;
+            
+            width: 295px;
+            height: 150px;
+            resize: none;
+            
+            outline: none;
+            border: 0;
+            border-radius: 10px;
+            
+            font-size: 1.5em;
+        }
         /* 
-        animation-name: keybtn-language;
-        animation-duration: .2s; */
+        #txtbox {
+            
+            width: 290px;
+            height: 150px;
+            
+            border: 0px;
+            border-radius: 10px;
+            
+            overflow-y: scroll;
+            outline: none;
+            
+            
+            
+        } */
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /* txt 마지막에, 디자인 깨짐 */
+        /* .txt {
+            position: relative;
+            left: 200px;
+        } */
 
-    }
 
-    .btn:active {
-
-        box-shadow: inset -.3rem -.1rem 1.4rem  #FBFBFB, inset .3rem .4rem .8rem #BEC5D0; 
-        cursor: pointer;
-
-    }
-
-    .daynighttab{
-        /* border: 1px solid black; */
-        border-radius: 30px;
-        width: 200px;
-        height: 60px;
-        box-shadow:.4rem .2rem 1.1rem  #BEC5D0, -.3rem -.4rem .8rem #FBFBFB;
-
-        position: relative;
-        left: 80px;
-        top: -480px;
-
-    }
     
-    #tabbtn {
-        /* border: 1px solid black; */
-        box-shadow: inset -.3rem -.1rem 1.4rem  #FBFBFB, inset .3rem .4rem .8rem #BEC5D0; 
-        width: 82px;
-        height: 43px;
-        border-radius: 18px;
-        
-        
-        position: relative;
-        left: 15px;
-        top: -14px;
-        
 
-    }
-
-    #tabbtn:hover {
-        transform: translate(30px 0px);
-    }
    
-
-    /* txt 마지막에, 디자인 깨짐 */
-    /* .txt {
-        position: relative;
-        left: 200px;
-    } */
-
-
-    
-
-
-
         
 
         
@@ -242,43 +315,42 @@
         </label>
         <div class="txt" id="info">
             <div id="birth"><i class="fas fa-birthday-cake"></i> 1995. 10. 12</div>
-            <div id="tel">010-5396-4935</div>
-            <div id="email">wjdgus4935@gmail.com</div>
-            <div id="address">서울시 봉천동 주소주소주소</div>
-            <div id="spec">스펙스펙스펙</div>
+            <div id="tel"><i class="fas fa-phone-alt"></i> 010-5396-4935</div>
+            <div id="email"><i class="fas fa-envelope"></i> wjdgus4935@gmail.com</div>
+            <div id="address"><i class="fas fa-map-marker-alt"></i> 서울시 봉천동 주소주소주소</div>
+            <div id="spec"><i class="fas fa-user"></i> 한국외국어대학교 환경학과 졸업</div>
         </div>
 
-        <div><input type="button" class="btn" id="btn1" value="J A V A"></div>
-        <div><input type="button" class="btn" id="btn2" value="O R A C L E"></div>
-        <div><input type="button" class="btn" id="btn3" value="HTML / CSS / JS"></div>
+        <div class="project">
+            <div><a href="java.html"><input type="button" class="btn" id="btn1" value="J A V A"></a></div>
+            <div><input type="button" class="btn" id="btn2" value="O R A C L E"></div>
+            <div><input type="button" class="btn" id="btn3" value="HTML / CSS / JS"></div>
+        </div>
 
-        <!-- 낮밤 -->
-
-        <div class="daynighttab">
-            <div>
-                <span id="txtday">낮</span><span id="txtnight">밤</span>
+        <!-- 낮밤 하...생각해보기-->
+        <div class="tab">
+                <input type="radio" name="radio1" value="1" id="tab1" checked/>
+                <label for="tab1" class= "dayTab">
+                <p>낮</p></label>
+                
+                <input type="radio" name="radio2" value="2" id="tab2" />
+                <label for="tab2" class= "nightTab">
+                <div class="tabColor"><p>밤</p></label>
             </div>
-            <div id="tabbtn"></div>
         </div>
-
-        <!-- <label for="tab-1" class= "segmented-control__1">
-            <p>Tab 1</p>
-        </label>
-        <input type="radio" name="radio2" value="4" id="tab-2" />
-        <label for="tab-2" class= "segmented-control__2">
-            <p>Tab 2</p>
-        </label> -->
+ 
+        <!-- <div id="txtholder">
+            <input type="text" class="txt" id="txtbox" placeholder="안녕하세요. 간단한 자기소개 간단한 자기소개간단한 자기소개간단한 자기소개간단한 자기소개간단한 자기소개간단한 자기소개간단한 자기소개간단한 자기소개간단한 자기소개간단한 자기소개">
+        </div> -->
 
 
-        <span><input type="text" class="txt" id="txtbox" placeholder="안녕하세요. 간단한 자기소개 간단한 자기소개간단한 자기소개간단한 자기소개간단한 자기소개간단한 자기소개간단한 자기소개간단한 자기소개간단한 자기소개간단한 자기소개간단한 자기소개"></span>
+        <textarea name="introduce" id="introduce" placeholder="안녕하세요"></textarea>
+
 
 
 
 
     </div>
-
-
-
-    </main>
+    </form>
 </body>
 </html>
