@@ -32,10 +32,6 @@
       margin-top: 5px;
     }
 
-    .col-md-6 img {
-      
-    }
-
     /* 1. 로그인 설명 */
     #mart_main{
       margin : 40px auto;
@@ -46,12 +42,21 @@
       width: 800px;
       height: 450px;
       image-rendering: -webkit-optimize-contrast;
+      border-radius: 2px;
     }
 
     .text{ 
       width: 800px; 
       margin: auto;
       font-size: 3rem;
+      font-weight: bold;
+      line-height: 2em;
+    }
+
+    .sub-title {
+      width: 800px; 
+      margin: 20px auto 0px auto;
+      font-size: 2.5rem;
       font-weight: bold;
       line-height: 2em;
     }
@@ -85,7 +90,13 @@
       margin: auto;
       font-size: 3rem;
       font-weight: bold;
-      
+    }
+
+    .outline_after {
+      width: 800px; 
+      margin: 100px auto 0 auto;
+      font-size: 3rem;
+      font-weight: bold;
     }
     
     .Divide {
@@ -94,12 +105,63 @@
     }
 
     /* 이미지 */
+  ul,li{list-style:none;}
+  
+  #slide{height:500px; position:relative;overflow:hidden;}
+  #slide ul{width:310%;height:100%;transition:1s;}
+  #slide ul:after{content:"";display:block;clear:both;}
+  #slide li{float:left;width:32.2%;height:100%;}
+  #slide li:nth-child(1){
+    background-image: url(./assets/images/mart/account_error_1.png);
+    background-size: 800px 500px;
+    border-radius: 2px;
+  }
+  #slide li:nth-child(2){
+    background-image: url(./assets/images/mart/account_error_2.png);
+    background-size: 800px 500px;
+    border-radius: 2px;
+  }
+ 
+    #slide li:nth-child(3){
+    background-image: url(./assets/images/mart/account_error_3.png);
+    background-size: 800px 500px;
+    border-radius: 2px;
+    }
+  
+  #slide input{display:none;}
+  
+  #slide label{
+    display:inline-block;
+    vertical-align:middle;
+    width:15px;
+    height:15px;
+    /* border:2px solid #666; */
+    background: rgb(255,255,255,0.5);
+    transition:0.3s;
+    border-radius:50%;
+    cursor:pointer;}
+  
+  #slide .pos{
+    text-align:center;
+    position:absolute;
+    bottom:10px;
+    left:0;
+    width:100%;
+    text-align:center;}
+  
+  #pos1:checked~ul{margin-left:-5%;}
+  #pos2:checked~ul{margin-left:-104%;}
+  #pos3:checked~ul{margin-left:-202%;}
+  #pos1:checked~.pos>label:nth-child(1){background:#ff2d73;}
+  #pos2:checked~.pos>label:nth-child(2){background:#ff2d73;}
+  #pos3:checked~.pos>label:nth-child(3){background:#ff2d73;}
+
+
 
   </style>
 
 
 </head>
-
 <body class="">
 <div id="site-border-left"></div>
 <div id="site-border-right"></div>
@@ -228,12 +290,21 @@
             <br>
             - 사용자를 위한 멈추기 기능
             <br>
-
-
           </div>
       </div>
+
       <div class="col-xs-12 " id="mart_main">
-        <div class="text">1. 로그인</div>
+        <div class="outline">3. 순서도
+        <div class="sub-text"></div>
+          <img src="./assets/images/mart/flow.jpg">
+        </div>
+      </div>
+
+
+
+      <div class="col-xs-12 " id="mart_main">
+        <div class="text">4. 구현 기능</div>
+        <div class="sub-title">1. 로그인</div>
         <div class="sub-text">1-1. 로그인 성공</div>
         <div class="outline">
           <img src="./assets/images/mart/login.png" name="loginsuccess">
@@ -248,26 +319,58 @@
           🌿 id 와 pw에 0을 입력하면 초기화면으로 되돌아갑니다.
           <br>
         </div>
+        <div class="outline_after">
+          <img src="./assets/images/mart/mart_login_code.jpg">
+        </div>
+        <div class="description">
+          1️⃣ do while을 이용해 조건에 맞지않는 입력을하면 재입력을 받을 수 있습니다.
+          <br>
+          2️⃣ 유효성 검사를 위해 isaccessibility 메소드를 별도로 생성했습니다.
+          <br>  
+          3️⃣ BufferedReader와 split으로 ','로 구분된 데이터 파일을 읽습니다. 
+          <br>  
+          4️⃣ flag 변수를 생성해 if문을 이용해서 사용자 구분과 에러메시지를 출력합니다.
+        </div>
       </div>
+      <div class="col-xs-12 Divide">◾ ◾ ◾ ◾</div>   
   
       
       
       <div class="col-xs-12 " id="mart_main">
         <div class="sub-text">1-2. 로그인 실패</div>
+        
         <div class="outline">
-          <img src="./assets/images/mart/loginerror.png" alt="">
+          <div id="slide">
+            <input type="radio" name="pos" id="pos1" checked>
+            <input type="radio" name="pos" id="pos2">
+            <input type="radio" name="pos" id="pos3">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <p class="pos">
+              <label for="pos1"></label>
+              <label for="pos2"></label>
+              <label for="pos3"></label>
+            </p>
+          </div>
         </div>
         <div class="description">
-          🌿 로그인 화면 입니다. 
+          🌿 로그인 실패시 출력되는 에러 메시지입니다.
           <br>
-          🌿 올바른 정보를 입력하면 해당 안내멘트가 출력된 후 다음 업무로 진행합니다.
-          <br>  
-          🌿 관리자 계정과 회원 계정을 구분해서 다음 업무에 접근하도록 했습니다. 
-          <br>  
-          🌿 id 와 pw에 0을 입력하면 초기화면으로 되돌아갑니다.
+          🌿 아이디, 비밀번호, 아이디와 비밀번호 3가지 경우에 대한 유효성 검사를 합니다.
           <br>
         </div>
+
+
+
+
+
+
       </div>
+
+      
 
     </div>
   </div>
@@ -285,23 +388,19 @@
 </footer>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function (event) {
-     navActivePage();
-  });
-  
-  let loginsuccess = window.document.images["loginsuccess"];
+  // document.addEventListener("DOMContentLoaded", function (event) {
+  //    navActivePage();
+  // });
+  // let loginsuccess = window.document.images["loginsuccess"];
+  // loginsuccess.onmouseover = CodeOpen;
+  // loginsuccess.onmouseout = CodeClose;
 
-  loginsuccess.onmouseover = CodeOpen;
-  loginsuccess.onmouseout = CodeClose;
-
-
-  function CodeOpen() {
-    loginsuccess.src = '../assets/images/mart/mart_login_code.jpg';
-  }
-
-  function CodeClose() {
-    loginsuccess.src = './assets/images/mart/login.png';
-  }
+  // function CodeOpen() {
+  //   loginsuccess.src = './assets/images/mart/mart_login_code.jpg';
+  // }
+  // function CodeClose() {
+  //   loginsuccess.src = './assets/images/mart/login.png';
+  // }
 
 
 
