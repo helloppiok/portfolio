@@ -19,7 +19,6 @@
 
   <link href="./main.3f6952e4.css" rel="stylesheet">
   <style>
-    /* #mart_role{ width: 440px; height: 234px;} */
     
     *::selection {
       background: #ff2d73 ;
@@ -33,10 +32,13 @@
       margin-top: 5px;
     }
 
+    .col-md-6 img {
+      
+    }
+
     /* 1. 로그인 설명 */
     #mart_main{
-      margin-left: auto;
-      margin-right: auto;
+      margin : 40px auto;
     }
 
     #mart_main img {
@@ -54,20 +56,31 @@
       line-height: 2em;
     }
 
-    /* 개요 */
+    .sub-text {
+      width: 800px;
+      margin : 10px auto;
+      font-size: 1.6em;
+      font-weight: 600;
+    }
+
+    /* 프로젝트 개요 */
     .description {
-      border: 1px solid rgb(137, 189, 148);
-      background-color: rgb(237, 245, 229);
+      /* border: 1px solid rgb(137, 189, 148); */
+      /* background-color: rgb(237, 245, 229); */
+      border-left: 1px solid rgb(100, 148, 61);
+      /* border-radius: 5px; */
       width: 800px;
       height: auto;
       margin: 30px auto;
-      padding: 15px 15px;
+      padding: 10px 20px;
       font-size: 1.6em;
       font-weight: 400;
       text-align: left;
+      line-height: 1.5em;
     }
 
     .outline {
+      /* border: 1px solid black; */
       width: 800px; 
       margin: auto;
       font-size: 3rem;
@@ -80,7 +93,7 @@
       margin: 30px 0;
     }
 
-    
+    /* 이미지 */
 
   </style>
 
@@ -163,16 +176,68 @@
 
 
       <div class="col-xs-12 Divide">◾ ◾ ◾ ◾</div>
+
       <div class="col-xs-12 " id="mart_main">
-        <div class="outline">프로젝트 개요</div>
+        <div class="outline">1. 프로젝트 개요</div>
         <div class="description">
-          최근 코로나로 인해 온라인 상거래 및 쇼핑의 증가하여 오프라인 지출이 감소 추세를 보이고 있습니다.
-          현 추세에 따라 온라인으로 효율적인 데이터 관리의 필요성이 대두되고 있어 상품정보, 배송정보를 한번에 관리할 수 있는 프로그램을 만들고자 했습니다. 또한 랍스터고리와 클리어타이와 같은 물품자체는 인지하지만 정확한 품명을 모르는 상품의 구입이 어려운 문제점을 보완했습니다.
+          🌿 코로나로 인해 온라인 상거래 및 쇼핑의 증가하여 오프라인 지출의 감소 추세<br>
+          🌿 온라인으로 효율적인 데이터 관리 필요성에 주목<br>
+          🌿 상품정보, 배송정보를 한번에 관리할 수 있는 프로그램 목적<br>
+          🌿 랍스터고리 등 정확한 품명을 모르는 상품의 구입이 어려운 문제점을 보완
         </div>
+      </div>
+      
+      <div class="col-xs-12 " id="mart_main">
+        <div class="outline">2. 요약</div>
+        <div class="description">
+            1.개발환경 : Windows 10, Eclipse
+            <br>
+            2.사용언어 : Java
+            <br>
+            3.참여인원 : 6인
+            <br>
+            4.구현기능
+            <br>
+            ▪ 로그인
+            <br>
+            - 로그인 성공시 안내멘트가 출력
+            <br>
+            - 로그인 실패시 재입력을 받고 안내멘트가 출력
+            <br>
+            - 로그인 실패 원인에 대해 각각 다른 안내멘트를 출력
+            <br>
+            - 관리자 계정과 회원 계정을 구분하고 각각 다른안내멘트를 출력
+            <br>
+            - 초기화면으로 돌아가기
+            <br>
+            - 회원정보를 저장하는 파일을 확인
+            <br><br>
+            ▪ 회원가입
+            <br>
+            - 회원가입을 통해 고객의 정보를 저장
+            <br>
+            - 아이디, 비밀번호, 이름, 나이, 전화번호 설정에 길이 및 문자 유효성 검사
+            <br>
+            - 주소, 베지테리언 단계 유효성 검사
+            <br>
+            - 전화번호 입력시 '-' 유무 관련없이 데이터 입력 가능
+            <br>
+            - 중복아이디는 설정 불가
+            <br>
+            - 제약사항에 위배되는 경우 경고멘트와 함께 재입력
+            <br>
+            - 사용자를 위한 멈추기 기능
+            <br>
+
+
+          </div>
       </div>
       <div class="col-xs-12 " id="mart_main">
         <div class="text">1. 로그인</div>
-        <img src="./assets/images/mart_loginsuccess.png" class="img-responsive" name="loginsuccess">
+        <div class="sub-text">1-1. 로그인 성공</div>
+        <div class="outline">
+          <img src="./assets/images/mart/login.png" name="loginsuccess">
+        </div>
         <div class="description">
           🌿 로그인 화면 입니다. 
           <br>
@@ -184,10 +249,14 @@
           <br>
         </div>
       </div>
-        
+  
+      
+      
       <div class="col-xs-12 " id="mart_main">
-        
-        <img src="./assets/images/mart_loginzero_code.png" class="img-responsive" name="loginsuccess">
+        <div class="sub-text">1-2. 로그인 실패</div>
+        <div class="outline">
+          <img src="./assets/images/mart/loginerror.png" alt="">
+        </div>
         <div class="description">
           🌿 로그인 화면 입니다. 
           <br>
@@ -227,12 +296,13 @@
 
 
   function CodeOpen() {
-    loginsuccess.src = './assets/images/mart_login_code.jpg';
+    loginsuccess.src = '../assets/images/mart/mart_login_code.jpg';
   }
 
   function CodeClose() {
-    loginsuccess.src = './assets/images/mart_loginsuccess.png';
+    loginsuccess.src = './assets/images/mart/login.png';
   }
+
 
 
 
