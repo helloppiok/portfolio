@@ -99,3 +99,9 @@
     font-size: 1.4em;
     font-weight: 500;
 }
+
+.requirements-img img {
+    height: 900px;
+    position: relative;
+    top: 10px;
+}
