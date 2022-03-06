@@ -11,17 +11,16 @@
 
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
-  
+
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
   <link href="./assets/favicon.ico" rel="icon">
 
-  <title>Project</title>  
+  <title>Project</title>
 
   <link href="./main.3f6952e4.css" rel="stylesheet">
   <style>
-    
     *::selection {
-      background: #ff2d73 ;
+      background: #ff2d73;
       color: white;
     }
 
@@ -33,8 +32,8 @@
     }
 
     /* 1. 로그인 설명 */
-    #mart_main{
-      margin : 40px auto;
+    #mart_main {
+      margin: 40px auto;
     }
 
     #mart_main img {
@@ -45,8 +44,8 @@
       border-radius: 2px;
     }
 
-    .text{ 
-      width: 800px; 
+    .text {
+      width: 800px;
       margin: auto;
       font-size: 3rem;
       font-weight: bold;
@@ -54,7 +53,8 @@
     }
 
     .sub-title {
-      width: 800px; 
+      border-left: 10px solid rgb(100, 148, 61);
+      width: 800px;
       margin: 20px auto 0px auto;
       font-size: 2.5rem;
       font-weight: bold;
@@ -63,8 +63,8 @@
 
     .sub-text {
       width: 800px;
-      margin : 10px auto;
-      font-size: 1.6em;
+      margin: 10px auto;
+      font-size: 2em;
       font-weight: 600;
     }
 
@@ -86,106 +86,143 @@
 
     .outline {
       /* border: 1px solid black; */
-      width: 800px; 
+      width: 800px;
       margin: auto;
       font-size: 3rem;
       font-weight: bold;
     }
 
-    .outline_after {
-      width: 800px; 
-      margin: 100px auto 0 auto;
-      font-size: 3rem;
-      font-weight: bold;
-    }
-    
     .Divide {
       text-align: center;
       margin: 30px 0;
     }
 
     /* 이미지 */
-  ul,li{list-style:none;}
-  
-  #slide{height:500px; position:relative;overflow:hidden;}
-  #slide ul{width:310%;height:100%;transition:1s;}
-  #slide ul:after{content:"";display:block;clear:both;}
-  #slide li{float:left;width:32.2%;height:100%;}
-  #slide li:nth-child(1){
-    background-image: url(./assets/images/mart/account_error_1.png);
-    background-size: 800px 500px;
-    border-radius: 2px;
-  }
-  #slide li:nth-child(2){
-    background-image: url(./assets/images/mart/account_error_2.png);
-    background-size: 800px 500px;
-    border-radius: 2px;
-  }
- 
-    #slide li:nth-child(3){
-    background-image: url(./assets/images/mart/account_error_3.png);
-    background-size: 800px 500px;
-    border-radius: 2px;
+    ul,
+    li {
+      list-style: none;
     }
-  
-  #slide input{display:none;}
-  
-  #slide label{
-    display:inline-block;
-    vertical-align:middle;
-    width:15px;
-    height:15px;
-    /* border:2px solid #666; */
-    background: rgb(255,255,255,0.5);
-    transition:0.3s;
-    border-radius:50%;
-    cursor:pointer;}
-  
-  #slide .pos{
-    text-align:center;
-    position:absolute;
-    bottom:10px;
-    left:0;
-    width:100%;
-    text-align:center;}
-  
-  #pos1:checked~ul{margin-left:-5%;}
-  #pos2:checked~ul{margin-left:-104%;}
-  #pos3:checked~ul{margin-left:-202%;}
-  #pos1:checked~.pos>label:nth-child(1){background:#ff2d73;}
-  #pos2:checked~.pos>label:nth-child(2){background:#ff2d73;}
-  #pos3:checked~.pos>label:nth-child(3){background:#ff2d73;}
 
+    #slide {
+      height: 500px;
+      position: relative;
+      overflow: hidden;
+    }
 
+    #slide ul {
+      width: 310%;
+      height: 100%;
+      transition: 1s;
+    }
 
+    #slide ul:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    #slide li {
+      float: left;
+      width: 32.2%;
+      height: 100%;
+    }
+
+    #slide li:nth-child(1) {
+      background-image: url(./assets/images/mart/account_error_1.png);
+      background-size: 800px 500px;
+      border-radius: 2px;
+    }
+
+    #slide li:nth-child(2) {
+      background-image: url(./assets/images/mart/account_error_2.png);
+      background-size: 800px 500px;
+      border-radius: 2px;
+    }
+
+    #slide li:nth-child(3) {
+      background-image: url(./assets/images/mart/account_error_3.png);
+      background-size: 800px 500px;
+      border-radius: 2px;
+    }
+
+    #slide input {
+      display: none;
+    }
+
+    #slide label {
+      display: inline-block;
+      vertical-align: middle;
+      width: 18px;
+      height: 18px;
+      /* border:2px solid #666; */
+      background: rgb(255, 255, 255, 0.45);
+      transition: 0.3s;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    #slide .pos {
+      text-align: center;
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    #pos1:checked~ul {
+      margin-left: -5%;
+    }
+
+    #pos2:checked~ul {
+      margin-left: -104%;
+    }
+
+    #pos3:checked~ul {
+      margin-left: -202%;
+    }
+
+    #pos1:checked~.pos>label:nth-child(1) {
+      background: #ff2d73;
+    }
+
+    #pos2:checked~.pos>label:nth-child(2) {
+      background: #ff2d73;
+    }
+
+    #pos3:checked~.pos>label:nth-child(3) {
+      background: #ff2d73;
+    }
   </style>
 
 
 </head>
+
 <body class="">
-<div id="site-border-left"></div>
-<div id="site-border-right"></div>
-<div id="site-border-top"></div>
-<div id="site-border-bottom"></div>
-<!-- Add your content of header -->
-<header>
-  <nav class="navbar  navbar-fixed-top navbar-default">
-    <div class="container">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+  <div id="site-border-left"></div>
+  <div id="site-border-right"></div>
+  <div id="site-border-top"></div>
+  <div id="site-border-bottom"></div>
+  <!-- Add your content of header -->
+  <header>
+    <nav class="navbar  navbar-fixed-top navbar-default">
+      <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+          aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
 
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav ">
-          <li><a href="./index.html" title="">01 : Home</a></li>
-          <li><a href="./works.html" title="">02 : Project</a></li>
-          <li><a href="./about.html" title="">03 : About me</a></li>
-          <li><a href="./contact.html" title="">04 : Contact</a></li>
-          <li><a href="./components.html" title="">05 : Components</a></li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav ">
+            <li><a href="./index.html" title="">01 : Home</a></li>
+            <li><a href="./works.html" title="">02 : Project</a></li>
+            <li><a href="./about.html" title="">03 : About me</a></li>
+            <li><a href="./contact.html" title="">04 : Contact</a></li>
+            <li><a href="./components.html" title="">05 : Components</a></li>
+          </ul>
 
 
           <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
@@ -198,67 +235,69 @@
           </ul>
 
 
-      </div> 
-    </div>
-  </nav>
-</header>
-<div class="section-container">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <img src="./assets/images/javamain.png" class="img-responsive" alt="">
-        <div class="card-container">
-          <div class="text-center">
-            <h1 class="h2">001 : 씽씽마트</h1>
-          </div>
-          <p style="text-align: center;">안녕하세요! 씽씽마트에 오신걸 환영합니다!</p>
-
-          <blockquote>
-            <p style="text-align: center;">JAVA Console Project</p>
-            <small class="pull-right">Team Project</small>
-          </blockquote>
         </div>
       </div>
+    </nav>
+  </header>
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <img src="./assets/images/javamain.png" class="img-responsive" alt="">
+          <div class="card-container">
+            <div class="text-center">
+              <h1 class="h2">001 : 씽씽마트</h1>
+            </div>
+            <p style="text-align: center;">안녕하세요! 씽씽마트에 오신걸 환영합니다!</p>
 
-      
-      
-      <div class="col-md-8 col-md-offset-2 section-container-spacer">
-        <div class="row">
-          <div class="col-xs-12 col-md-6">
-            <img src="./assets/images/마트.jpg" class="img-responsive" alt="">
-            <p>프로젝트 주제</p>
-          </div>
-          <div class="col-xs-12 col-md-6" >
-            <img src="./assets/images/mart_role.JPG" class="img-responsive" id="mart_role">
-            <p>구현 기능</p>
+            <blockquote>
+              <p style="text-align: center;">JAVA Console Project</p>
+              <small class="pull-right">Team Project</small>
+            </blockquote>
           </div>
         </div>
-      </div>
 
 
 
-      <div class="col-xs-12 Divide">◾ ◾ ◾ ◾</div>
-
-      <div class="col-xs-12 " id="mart_main">
-        <div class="outline">1. 프로젝트 개요</div>
-        <div class="description">
-          🌿 코로나로 인해 온라인 상거래 및 쇼핑의 증가하여 오프라인 지출의 감소 추세<br>
-          🌿 온라인으로 효율적인 데이터 관리 필요성에 주목<br>
-          🌿 상품정보, 배송정보를 한번에 관리할 수 있는 프로그램 목적<br>
-          🌿 랍스터고리 등 정확한 품명을 모르는 상품의 구입이 어려운 문제점을 보완
+        <div class="col-md-8 col-md-offset-2 section-container-spacer">
+          <div class="row">
+            <div class="col-xs-12 col-md-6">
+              <img src="./assets/images/마트.jpg" class="img-responsive" alt="">
+              <p>프로젝트 주제</p>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <img src="./assets/images/mart_role.JPG" class="img-responsive" id="mart_role">
+              <p>구현 기능</p>
+            </div>
+          </div>
         </div>
-      </div>
-      
-      <div class="col-xs-12 " id="mart_main">
-        <div class="outline">2. 요약</div>
-        <div class="description">
+
+
+
+        <div class="col-xs-12 Divide">◾ ◾ ◾ ◾</div>
+
+        <div class="col-xs-12 " id="mart_main">
+          <div class="outline">1. 프로젝트 개요</div>
+          <div class="description">
+            🌿 코로나로 인해 온라인 상거래 및 쇼핑의 증가하여 오프라인 지출의 감소 추세<br>
+            🌿 온라인으로 효율적인 데이터 관리 필요성에 주목<br>
+            🌿 상품정보, 배송정보를 한번에 관리할 수 있는 프로그램 목적<br>
+            🌿 랍스터고리 등 정확한 품명을 모르는 상품의 구입이 어려운 문제점을 보완
+          </div>
+        </div>
+
+        <div class="col-xs-12 " id="mart_main">
+          <div class="outline">2. 요약</div>
+          <div class="description">
             1.개발환경 : Windows 10, Eclipse
             <br>
             2.사용언어 : Java
             <br>
             3.참여인원 : 6인
             <br>
-            4.구현기능
+            4.개발툴&nbsp;&nbsp;&nbsp;: Eclipse IDE 
+            <br>
+            5.구현기능
             <br>
             ▪ 로그인
             <br>
@@ -291,103 +330,150 @@
             - 사용자를 위한 멈추기 기능
             <br>
           </div>
-      </div>
+        </div>
 
-      <div class="col-xs-12 " id="mart_main">
-        <div class="outline">3. 순서도
-        <div class="sub-text"></div>
-          <img src="./assets/images/mart/flow.jpg">
-        </div>
-      </div>
-
-
-
-      <div class="col-xs-12 " id="mart_main">
-        <div class="text">4. 구현 기능</div>
-        <div class="sub-title">1. 로그인</div>
-        <div class="sub-text">1-1. 로그인 성공</div>
-        <div class="outline">
-          <img src="./assets/images/mart/login.png" name="loginsuccess">
-        </div>
-        <div class="description">
-          🌿 로그인 화면 입니다. 
-          <br>
-          🌿 올바른 정보를 입력하면 해당 안내멘트가 출력된 후 다음 업무로 진행합니다.
-          <br>  
-          🌿 관리자 계정과 회원 계정을 구분해서 다음 업무에 접근하도록 했습니다. 
-          <br>  
-          🌿 id 와 pw에 0을 입력하면 초기화면으로 되돌아갑니다.
-          <br>
-        </div>
-        <div class="outline_after">
-          <img src="./assets/images/mart/mart_login_code.jpg">
-        </div>
-        <div class="description">
-          1️⃣ do while을 이용해 조건에 맞지않는 입력을하면 재입력을 받을 수 있습니다.
-          <br>
-          2️⃣ 유효성 검사를 위해 isaccessibility 메소드를 별도로 생성했습니다.
-          <br>  
-          3️⃣ BufferedReader와 split으로 ','로 구분된 데이터 파일을 읽습니다. 
-          <br>  
-          4️⃣ flag 변수를 생성해 if문을 이용해서 사용자 구분과 에러메시지를 출력합니다.
-        </div>
-      </div>
-      <div class="col-xs-12 Divide">◾ ◾ ◾ ◾</div>   
-  
-      
-      
-      <div class="col-xs-12 " id="mart_main">
-        <div class="sub-text">1-2. 로그인 실패</div>
-        
-        <div class="outline">
-          <div id="slide">
-            <input type="radio" name="pos" id="pos1" checked>
-            <input type="radio" name="pos" id="pos2">
-            <input type="radio" name="pos" id="pos3">
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <p class="pos">
-              <label for="pos1"></label>
-              <label for="pos2"></label>
-              <label for="pos3"></label>
-            </p>
+        <div class="col-xs-12 " id="mart_main">
+          <div class="outline">3. 순서도
+            <div class="sub-text"></div>
+            <img src="./assets/images/mart/flow.jpg">
           </div>
         </div>
-        <div class="description">
-          🌿 로그인 실패시 출력되는 에러 메시지입니다.
-          <br>
-          🌿 아이디, 비밀번호, 아이디와 비밀번호 3가지 경우에 대한 유효성 검사를 합니다.
-          <br>
+
+
+
+        <div class="col-xs-12 " id="mart_main">
+          <div class="text">4. 구현 기능</div>
+          <div class="sub-title">&nbsp;1. 로그인</div>
+          <div class="sub-text">1-1. 로그인 성공</div>
+          <div class="outline">
+            <img src="./assets/images/mart/login.png" name="loginsuccess">
+          </div>
+          <div class="description">
+            🌿 로그인 화면 입니다.
+            <br>
+            🌿 올바른 정보를 입력하면 해당 안내멘트가 출력된 후 다음 업무로 진행합니다.
+            <br>
+            🌿 관리자 계정과 회원 계정을 구분해서 다음 업무에 접근하도록 했습니다.
+            <br>
+            🌿 id 와 pw에 0을 입력하면 초기화면으로 되돌아갑니다.
+            <br>
+          </div>
+
+          <div class="col-xs-12 " id="mart_main">
+            <div class="sub-text">1-2. 로그인 실패</div>
+
+            <div class="outline">
+              <div id="slide">
+                <input type="radio" name="pos" id="pos1" checked>
+                <input type="radio" name="pos" id="pos2">
+                <input type="radio" name="pos" id="pos3">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <p class="pos">
+                  <label for="pos1"></label>
+                  <label for="pos2"></label>
+                  <label for="pos3"></label>
+                </p>
+              </div>
+            </div>
+            <div class="description">
+              🌿 로그인 실패시 출력되는 에러 메시지입니다.
+              <br>
+              🌿 아이디, 비밀번호, 아이디와 비밀번호 3가지 경우에 대한 유효성 검사를 합니다.
+              <br>
+            </div>
+          </div>
+
+          <div class="col-xs-12 Divide">◾ ◾ ◾ ◾</div>
+          <div class="sub-text">☑ Code</div>
+          <div class="outline">
+            <img src="./assets/images/mart/mart_login_code.jpg">
+          </div>
+          <div class="description">
+            1️⃣ do while을 이용해 조건에 맞지않는 입력을하면 재입력을 받을 수 있습니다.
+            <br>
+            2️⃣ 유효성 검사를 위해 isaccessibility 메소드를 별도로 생성했습니다.
+            <br>
+            3️⃣ BufferedReader와 split으로 ','로 구분된 데이터 파일을 읽습니다.
+            <br>
+            4️⃣ flag 변수를 생성해 if문을 이용해서 사용자 구분과 에러메시지를 출력합니다.
+          </div>
         </div>
 
-
-
-
-
-
+        <div class="col-xs-12 " id="mart_main">
+          <div class="sub-title">&nbsp;2. 회원가입</div>
+          <div class="sub-text">2-1. 회원가입 성공</div>
+          <div class="outline">
+            <img src="./assets/images/mart/idnew.png">
+          </div>
+          <div class="description">
+            🌿 회원가입 화면입니다.
+            <br>
+            🌿 올바른 정보를 입력하면 지정한 파일에 데이터가 저장됩니다.
+            <br>
+            🌿 모든 정보는 유효성 검사를 합니다.
+            <br>
+            🌿 마지막에 멈춤기능이 있어 Enter를 눌러 다음화면으로 넘어갑니다. 
+            <br>
+          </div>
+          
+          <div class="col-xs-12 " id="mart_main">
+            <div class="sub-text">2-2. 회원가입 실패</div>
+            <div class="outline">
+              <img src="./assets/images/mart/loginerror.png">
+            </div>
+            <div class="description">
+              🌿 회원가입 실패시 출력메시지입니다.
+              <br>
+              🌿 문자열 길이, 문자 종류 등 기준에서 벗어나는 정보는 에러메시지를 출력합니다.
+              <br>
+              🌿 에러메시지 출력 후 재입력을 받고 올바르게ㅇ 입력할때까지 재입력을 받습니다.
+            </div>
+          
+            <div class="col-xs-12 Divide">◾ ◾ ◾ ◾</div>
+            <div class="sub-text">☑ Point Code : 전화번호 유효성검사 </div>
+            <div class="outline">
+              <img src="./assets/images/mart/idnew_code.JPG">
+            </div>
+            <div class="description">
+              1️⃣ if(tel.length == 13)은 '-'를 포함한 전화번호가 총 13자리를 의미합니다.
+              <br>
+              2️⃣ 13자리가 아닌경우는 '-'미기입 또는 잘못기입 2가지 경우로 구분했습니다.
+              <br>
+              3️⃣ substring()으로 '-'가 없는 번호를 저장할 수 있습니다.
+              <br>
+              4️⃣ if문과 charAt()로 문자열을 검사합니다.
+            </div>
       </div>
-
-      
-
     </div>
-  </div>
-</div>
-
-
-<footer class="footer-container text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <p>© UNTITLED | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></p>
+    <div class="col-xs-12 " id="mart_main">
+      <div class="text">5. 프로젝트 파일</div>
+      <div class="description">
+        <a href="https://github.com/helloppiok/SsingSsingMart#-4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%8C%8C%EC%9D%BC-" style="text-decoration: none;">
+          <input type="button" value="🌿깃허브 이동" class="btn btn-default">
+        </a>
+        프로젝트 전체 파일이 있는 readme.md로 이동하는 깃허브링크입니다.
       </div>
     </div>
-  </div>
-</footer>
 
-<script>
+<!--  -->
+
+
+  <footer class="footer-container text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <p>© LJH | Gihub <a href="https://github.com/helloppiok/SsingSsingMart"
+              title="Create website with free html template">SsingSsing</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
   // document.addEventListener("DOMContentLoaded", function (event) {
   //    navActivePage();
   // });
@@ -405,8 +491,9 @@
 
 
 
-</script>
+  </script>
 
-<script type="text/javascript" src="./main.70a66962.js"></script></body>
+  <script type="text/javascript" src="./main.70a66962.js"></script>
+</body>
 
 </html>
