@@ -1,0 +1,101 @@
+/* 드래그 색상 */
+*::selection {
+    background: #ff2d73;
+    color: white;
+}
+
+/* 소개 사진 글 */
+.col-md-6 > p {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+/* 나누는 점 */
+.Divide { 
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* 설명 세로 줄 */
+.description {
+    border-left: 1px solid rgb(240, 176, 38);
+    width: 800px;
+    height: auto;
+    margin: 20px auto 30px auto;
+    padding: 10px 20px;
+    font-size: 1.6em;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+/* 메인 제외 이미지들 */
+.outline img {
+    margin: 0 auto;
+    width: 800px;
+    height: 450px;
+    image-rendering: -webkit-optimize-contrast;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+/* 1. 프로젝트 개요 */
+.enter {
+    margin: 20px auto;
+  }
+
+
+/* 3. erd */
+.erd img {
+    margin: 0 auto;
+    width: 800px;
+    height: 450px;
+    image-rendering: -webkit-optimize-contrast;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.sub-description { 
+    font-size: .5em;
+    margin : 10px;
+}
+
+.text {
+    width: 800px;
+    margin: auto;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 2em;
+}
+
+/* 4. 구현기능 */
+.sub-title {
+    border-left: 10px solid rgb(240, 176, 38);
+    width: 800px;
+    margin: 20px auto 0px auto;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 2em;
+}
+
+.sub-text {
+    width: 800px;
+    margin: 30px auto 10px auto;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.outline {
+    /* border: 1px solid black; */
+    width: 800px;
+    margin: auto;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.charge-sub-descirption {
+    font-size: 1.4em;
+    font-weight: 500;
+}
