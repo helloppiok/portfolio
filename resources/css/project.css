@@ -43,7 +43,7 @@
 
 /* 1. 프로젝트 개요 */
 .enter {
-    margin: 20px auto;
+    margin: 40px auto;
   }
 
 
@@ -105,3 +105,4 @@
     position: relative;
     top: 10px;
 }
+
