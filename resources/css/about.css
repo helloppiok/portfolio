@@ -1,0 +1,78 @@
+*::selection {
+    background: #ff2d73 ;
+    color: white;
+}
+.introduce {
+    font-size: 1.6em;
+    line-height: 3rem;
+    
+}
+
+.introduce:hover {
+    font-weight: 800;
+    transition: all .2s;
+}
+
+#first-text{
+    font-size: 2.5em; 
+    font-weight: 900;
+    display: inline-block
+}
+.img-responsive {
+    filter: grayscale(100%);
+}
+
+.img-responsive:hover {
+    transition-duration: .3s;
+    filter: grayscale(0%);
+}
+
+/* 글자 */
+p {
+    font-size: 1.3em;
+    text-align: justify;
+}
+
+p:hover {
+    font-weight: 600;
+    transition: none .2s;
+}
+
+.about-me p {
+    margin: 0;
+
+}
+
+/* 학교 */
+.about-me .school {
+    border : 1px solid rgb(78, 78, 78);
+    width: 220px;
+    height: 100px;
+    float: left;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.about-me .school:hover {
+    border : 3px solid #ff2d73;
+}
+
+.about-me .school img {
+    width: 97px;
+}
+
+#univer {
+    width: 107px;
+    position: relative;
+    top: 2px;
+}
+
+.about-me .school:nth-child(2) {
+    margin-right: 15px;
+    background-image: 300px 300px;
+}
+
+.about-me .school:nth-child(4) {
+    clear: both;
+}
