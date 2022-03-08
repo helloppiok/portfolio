@@ -8,11 +8,6 @@
     
 }
 
-.introduce:hover {
-    font-weight: 800;
-    transition: all .2s;
-}
-
 #first-text{
     font-size: 2.5em; 
     font-weight: 900;
@@ -29,13 +24,8 @@
 
 /* 글자 */
 p {
-    font-size: 1.3em;
+    font-size: 1.6em;
     text-align: justify;
-}
-
-p:hover {
-    font-weight: 600;
-    transition: none .2s;
 }
 
 .about-me p {
@@ -43,6 +33,9 @@ p:hover {
 
 }
 
+#box-road p:hover {
+    font-weight: 600;
+}
 /* 학교 */
 .about-me .school {
     border : 1px solid rgb(78, 78, 78);
@@ -68,17 +61,25 @@ p:hover {
     top: 2px;
 }
 
-.about-me .school:nth-child(2) {
+.about-me .box-school div:nth-child(1) {
     margin-right: 15px;
     background-image: 300px 300px;
 }
 
-.about-me .school:nth-child(4) {
-    clear: both;
+.enter {
+    margin-bottom: 20px;
+}
+
+.box-school {
+    width: 100%;
+    height: 120px;
+    /* background-color: gold; */
+    display: flex;
+    justify-content: center;
 }
 
 /* 스킬로고 */
-.stack-logo { width: 80px;}
+.stack-logo { width: 76px;}
 
 #oracle-logo  {
     width: 98px;
@@ -92,4 +93,132 @@ p:hover {
     width: 46px;
 }
 
-#spring-logo {margin-top: 10px;}
+#spring-logo {margin-top: 10px; height: 26px;}
+
+/* 자격증 */
+span {
+    margin-left: 5px;
+}
+
+/* 글상자 */
+#box-introduce {
+    border: 2px solid rgb(175, 175, 175);
+    border-radius: 2px;
+    margin: 20px auto 50px auto;
+    padding: 15px 10px;
+}
+
+#box-introduce:hover {
+   border-color: transparent;
+   background-color: #ff2d7336;
+}
+
+#box-skills {
+    border: 2px solid rgb(175, 175, 175);
+    border-radius: 2px;
+    margin: 20px auto;
+    padding: 15px 10px 39px 10px;
+}
+
+#box-skills:hover {
+    border-color: transparent;
+    background-color: #ff2d7336;
+}
+
+#box-road {
+    border: 2px solid rgb(175, 175, 175);
+    border-radius: 2px;
+    margin: 50px auto 50px auto;
+    padding: 15px 10px; 
+    width: 100%;
+    display: block;
+    clear: both;
+
+}
+
+#box-road:hover {
+    border-color: transparent;
+    background-color: #ff2d7336;
+}
+
+
+
+/* 장점 */
+#box-aboutme {
+    /* background-color: #ff2d73; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    
+}
+
+.adventages {
+    border-radius: 5px;
+    width: 260px;
+    height: 260px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.adventages span {
+    position: relative;
+    top: -240px;
+    right: -10px;
+    color: transparent;
+    display: flex;
+    text-align: left;
+}
+
+/* 장점- 호버효과 */
+.adventages:nth-child(1):hover  {
+    background-color: black;
+    transition-duration: .3s;
+}
+.adventages:nth-child(1):hover span  {
+    transition-duration: .3s;
+    color: whitesmoke;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.adventages:nth-child(2):hover  {
+    background-color: black;
+    transition-duration: .3s;
+}
+.adventages:nth-child(2):hover span  {
+    transition-duration: .3s;
+    color: whitesmoke;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.adventages:nth-child(3):hover  {
+    background-color: black;
+    transition-duration: .3s;
+}
+.adventages:nth-child(3):hover span  {
+    transition-duration: .3s;
+    color: whitesmoke;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+
+/* 장점-이미지 */
+.adventages img {
+    width: 220px;
+}
+
+.adventages p {
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+footer p{
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 50px;
+}
+
