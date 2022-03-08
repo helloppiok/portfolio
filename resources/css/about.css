@@ -104,7 +104,7 @@ span {
 #box-introduce {
     border: 2px solid rgb(175, 175, 175);
     border-radius: 2px;
-    margin: 20px auto 50px auto;
+    margin: 20px auto 24px auto;
     padding: 15px 10px;
 }
 
@@ -116,8 +116,8 @@ span {
 #box-skills {
     border: 2px solid rgb(175, 175, 175);
     border-radius: 2px;
-    margin: 20px auto;
     padding: 15px 10px 39px 10px;
+    margin-bottom: 20px;
 }
 
 #box-skills:hover {
