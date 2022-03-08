@@ -76,3 +76,10 @@ p:hover {
 .about-me .school:nth-child(4) {
     clear: both;
 }
+
+/* 스킬로고 */
+.stack-logo { width: 100px;}
+
+#oracle-logo {
+    width: 120px;
+}
