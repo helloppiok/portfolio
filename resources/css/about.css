@@ -78,8 +78,18 @@ p:hover {
 }
 
 /* 스킬로고 */
-.stack-logo { width: 100px;}
+.stack-logo { width: 80px;}
 
-#oracle-logo {
-    width: 120px;
+#oracle-logo  {
+    width: 98px;
 }
+
+#js-logo { height: 29px;}
+
+#jsp-logo { 
+    margin-top: 10px;
+    height: 26px;
+    width: 46px;
+}
+
+#spring-logo {margin-top: 10px;}
